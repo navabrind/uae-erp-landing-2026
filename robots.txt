@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /.netlify/
+
+# AI crawler allowlist
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://erp.navabrindsol.com/sitemap.xml

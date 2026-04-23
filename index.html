@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odoo ERP Implementation UAE — Finance-Led ERP for Growth Businesses | Navabrind IT Solutions</title>
+  <meta name="description" content="Navabrind IT Solutions delivers Odoo finance-led ERP implementation, migration, and maintenance for UAE manufacturers, distributors, and trading businesses. Odoo Gold Partner with UAE team." />
+  <meta name="keywords" content="Odoo ERP UAE, ERP implementation Dubai, Odoo Gold Partner UAE, ERP migration UAE, Odoo finance implementation, Odoo manufacturing UAE, Odoo distributor UAE, MS Dynamics migration Odoo, SAP to Odoo UAE" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Navabrind IT Solutions" />
+  <link rel="canonical" href="https://erp.navabrindsol.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://erp.navabrindsol.com/" />
+  <meta property="og:title" content="Odoo Finance-Led ERP Implementation for UAE Businesses" />
+  <meta property="og:description" content="We help UAE businesses implement Odoo end to end, migrate from legacy ERP systems, and maintain stable operations with stronger finance control and reporting confidence." />
+  <meta property="og:image" content="https://erp.navabrindsol.com/og-image.png" />
+  <meta property="og:site_name" content="Navabrind IT Solutions" />
+  <meta property="og:locale" content="en_AE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Odoo Finance-Led ERP Implementation for UAE Businesses" />
+  <meta name="twitter:description" content="ERP implementation, migration, and maintenance for UAE manufacturers, distributors, and trading businesses. Odoo Gold Partner." />
+  <meta name="twitter:image" content="https://erp.navabrindsol.com/og-image.png" />
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Navabrind IT Solutions — UAE ERP & Finance Practice",
+    "description": "Odoo finance-led ERP implementation, migration, and maintenance for UAE manufacturers, distributors, and trading businesses.",
+    "url": "https://erp.navabrindsol.com",
+    "areaServed": "UAE",
+    "serviceType": ["ERP Implementation", "ERP Migration", "Odoo Consulting", "Manufacturing ERP", "Distribution ERP"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "UAE ERP Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Accounting-led Odoo Implementation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ERP Migration to Odoo"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Manufacturing & Distribution Rollouts"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Maintenance and Stabilization Services"}}
+      ]
+    },
+    "publisher": {"@type": "Organization", "name": "Navabrind IT Solutions", "url": "https://navabrindsol.com"}
+  }
+  </script>
+  <!-- JSON-LD: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this only for new Odoo implementations?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. We support new Odoo implementations, ERP migrations, finance cleanup, stabilization, and long-term maintenance services."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which ERP systems do you support for migration or replacement?",
+        "acceptedAnswer": {"@type": "Answer", "text": "We work with businesses moving from MS Dynamics, SAP, Oracle, Sage, Zoho, Epicor, Tally, QuickBooks, spreadsheets, and other legacy ERP platforms."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do you support manufacturers and distributors?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We provide end-to-end implementation and maintenance services for manufacturing and distribution businesses, covering finance, inventory, procurement, workflows, and reporting."}
+      },
+      {
+        "@type": "Question",
+        "name": "What makes this Odoo finance-led approach different?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Many ERP projects fail at the finance layer. Our Odoo finance-led implementation approach focuses on reporting trust, tax logic, controls, and operational accounting from day one — not just module configuration."}
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts: Cabinet Grotesk (display) + Satoshi (body) via Fontshare -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── DESIGN TOKENS ──────────────────────────────────────────────── */
+    :root {
+      /* Type scale */
+      --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+      --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+      --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+      --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+      --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+      --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+
+      /* Spacing */
+      --space-1:0.25rem; --space-2:0.5rem;  --space-3:0.75rem;
+      --space-4:1rem;    --space-5:1.25rem; --space-6:1.5rem;
+      --space-8:2rem;    --space-10:2.5rem; --space-12:3rem;
+      --space-16:4rem;   --space-20:5rem;   --space-24:6rem;
+
+      /* Radii */
+      --radius-sm:0.375rem; --radius-md:0.5rem; --radius-lg:0.75rem;
+      --radius-xl:1rem;     --radius-2xl:1.5rem; --radius-full:9999px;
+
+      --transition: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+      --content: 1160px;
+      --content-narrow: 720px;
+
+      /* Fonts */
+      --font-display: 'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
+      --font-body:    'Satoshi', 'Inter', sans-serif;
+    }
+
+    /* ── LIGHT MODE ─────────────────────────────────────────────────── */
+    :root, [data-theme="light"] {
+      --color-bg:              #f5f4f0;
+      --color-surface:         #f9f8f5;
+      --color-surface-2:       #ffffff;
+      --color-surface-card:    #ffffff;
+      --color-surface-offset:  #eeecea;
+      --color-divider:         #dddbd7;
+      --color-border:          #d6d4cf;
+      --color-text:            #1e1c17;
+      --color-text-muted:      #6b6a66;
+      --color-text-faint:      #aeaca8;
+      --color-text-inverse:    #f9f8f5;
+
+      /* UAE Gold / Deep Navy brand */
+      --color-primary:         #1a3a5c;
+      --color-primary-hover:   #122a44;
+      --color-primary-active:  #0c1e30;
+      --color-primary-highlight: #d0dbe8;
+      --color-accent:          #c9922a;
+      --color-accent-hover:    #b07a1c;
+      --color-accent-highlight:#f5e8d0;
+      --color-success:         #2e7d4e;
+      --color-success-highlight:#d1e8db;
+
+      --shadow-sm:  0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md:  0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg:  0 12px 40px rgba(0,0,0,0.12);
+      --shadow-xl:  0 24px 64px rgba(0,0,0,0.14);
+    }
+
+    /* ── DARK MODE ──────────────────────────────────────────────────── */
+    [data-theme="dark"] {
+      --color-bg:              #121110;
+      --color-surface:         #181715;
+      --color-surface-2:       #1e1d1b;
+      --color-surface-card:    #222120;
+      --color-surface-offset:  #1b1a18;
+      --color-divider:         #2a2927;
+      --color-border:          #333230;
+      --color-text:            #d8d6d2;
+      --color-text-muted:      #7a7976;
+      --color-text-faint:      #555452;
+      --color-text-inverse:    #1e1c17;
+      --color-primary:         #5b8fc2;
+      --color-primary-hover:   #7aaad4;
+      --color-primary-active:  #9ac3e3;
+      --color-primary-highlight: #1e2d3d;
+      --color-accent:          #dba83a;
+      --color-accent-hover:    #e9c06a;
+      --color-accent-highlight:#3d2e10;
+      --color-success:         #4fa36a;
+      --color-success-highlight:#1a2e21;
+      --shadow-sm:  0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md:  0 4px 16px rgba(0,0,0,0.4);
+      --shadow-lg:  0 12px 40px rgba(0,0,0,0.5);
+      --shadow-xl:  0 24px 64px rgba(0,0,0,0.6);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg:#121110; --color-surface:#181715; --color-surface-2:#1e1d1b;
+        --color-surface-card:#222120; --color-surface-offset:#1b1a18;
+        --color-divider:#2a2927; --color-border:#333230; --color-text:#d8d6d2;
+        --color-text-muted:#7a7976; --color-text-faint:#555452; --color-text-inverse:#1e1c17;
+        --color-primary:#5b8fc2; --color-primary-hover:#7aaad4; --color-primary-active:#9ac3e3;
+        --color-primary-highlight:#1e2d3d; --color-accent:#dba83a; --color-accent-hover:#e9c06a;
+        --color-accent-highlight:#3d2e10; --color-success:#4fa36a; --color-success-highlight:#1a2e21;
+        --shadow-sm:0 1px 3px rgba(0,0,0,0.3); --shadow-md:0 4px 16px rgba(0,0,0,0.4);
+        --shadow-lg:0 12px 40px rgba(0,0,0,0.5); --shadow-xl:0 24px 64px rgba(0,0,0,0.6);
+      }
+    }
+
+    /* ── BASE RESET ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--space-16);
+    }
+    body {
+      min-height: 100dvh;
+      line-height: 1.6;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+    img, svg { display: block; max-width: 100%; height: auto; }
+    ul[role="list"], ol[role="list"] { list-style: none; }
+    input, button, textarea, select { font: inherit; color: inherit; }
+    h1,h2,h3,h4,h5,h6 { text-wrap: balance; line-height: 1.15; font-family: var(--font-display); }
+    p, li, figcaption { text-wrap: pretty; max-width: 72ch; }
+    button { cursor: pointer; background: none; border: none; }
+    ::selection { background: color-mix(in oklab, var(--color-accent) 20%, transparent); }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+    a, button, [role="button"], input, textarea, select {
+      transition: color var(--transition), background var(--transition), border-color var(--transition), box-shadow var(--transition), opacity var(--transition);
+    }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border-width:0; }
+
+    /* ── LAYOUT UTILITIES ───────────────────────────────────────────── */
+    .container { width: 100%; max-width: var(--content); margin-inline: auto; padding-inline: clamp(var(--space-4), 5vw, var(--space-12)); }
+    .container--narrow { max-width: var(--content-narrow); }
+    section { padding-block: clamp(var(--space-16), 8vw, var(--space-24)); }
+
+    /* ── NAVIGATION ─────────────────────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: oklch(from var(--color-bg) l c h / 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-divider);
+      transition: box-shadow var(--transition);
+    }
+    .nav--scrolled { box-shadow: var(--shadow-sm); }
+    .nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: var(--space-8);
+    }
+    .nav__logo {
+      display: flex; align-items: center; gap: var(--space-3);
+      text-decoration: none; color: var(--color-text);
+    }
+    .nav__logo-mark {
+      width: 36px; height: 36px; flex-shrink: 0;
+    }
+    .nav__logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .nav__logo-name { font-family: var(--font-display); font-weight: 800; font-size: var(--text-sm); letter-spacing: -0.02em; color: var(--color-text); }
+    .nav__logo-tag { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 400; }
+    .nav__links {
+      display: flex; align-items: center; gap: var(--space-6);
+      list-style: none;
+    }
+    .nav__links a {
+      font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted);
+      text-decoration: none; transition: color var(--transition);
+    }
+    .nav__links a:hover { color: var(--color-text); }
+    .nav__actions { display: flex; align-items: center; gap: var(--space-3); }
+    .btn { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); font-weight: 600; padding: var(--space-2) var(--space-5); border-radius: var(--radius-md); text-decoration: none; white-space: nowrap; }
+    .btn--primary { background: var(--color-primary); color: var(--color-text-inverse); }
+    .btn--primary:hover { background: var(--color-primary-hover); }
+    .btn--outline { border: 1px solid var(--color-border); color: var(--color-text-muted); background: transparent; }
+    .btn--outline:hover { border-color: var(--color-text-muted); color: var(--color-text); background: var(--color-surface); }
+    .btn--accent { background: var(--color-accent); color: #fff; }
+    .btn--accent:hover { background: var(--color-accent-hover); }
+    .btn--lg { font-size: var(--text-base); padding: var(--space-4) var(--space-8); }
+    .btn--full { width: 100%; justify-content: center; }
+    .theme-toggle {
+      width: 36px; height: 36px; border-radius: var(--radius-full);
+      border: 1px solid var(--color-border); background: var(--color-surface);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--color-text-muted); cursor: pointer; flex-shrink: 0;
+    }
+    .theme-toggle:hover { color: var(--color-text); border-color: var(--color-text-muted); }
+    .nav__hamburger { display: none; }
+    @media (max-width: 768px) {
+      .nav__links { display: none; }
+      .nav__hamburger { display: flex; width: 36px; height: 36px; align-items: center; justify-content: center; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text-muted); }
+      .nav__links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--color-surface); border-bottom: 1px solid var(--color-divider); padding: var(--space-4) clamp(var(--space-4),5vw,var(--space-12)); gap: var(--space-4); box-shadow: var(--shadow-md); z-index: 99; }
+    }
+
+    /* ── HERO ───────────────────────────────────────────────────────── */
+    .hero {
+      padding-block: clamp(var(--space-16), 8vw, var(--space-24));
+      background: linear-gradient(135deg, var(--color-primary) 0%, #0f2a45 60%, #0c1e30 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; top: -40%; right: -10%;
+      width: 60vw; height: 140%;
+      background: radial-gradient(ellipse at center, rgba(201,146,42,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: clamp(var(--space-10), 5vw, var(--space-16));
+      align-items: start;
+      position: relative; z-index: 1;
+    }
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--color-accent); background: color-mix(in oklab, var(--color-accent) 14%, transparent);
+      border: 1px solid color-mix(in oklab, var(--color-accent) 30%, transparent);
+      padding: var(--space-1) var(--space-3); border-radius: var(--radius-full);
+      margin-bottom: var(--space-6);
+    }
+    .hero__heading {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: var(--text-2xl); color: #ffffff;
+      letter-spacing: -0.03em; line-height: 1.1;
+      margin-bottom: var(--space-6);
+    }
+    .hero__heading em { font-style: normal; color: var(--color-accent); }
+    .hero__body {
+      font-size: var(--text-base); color: rgba(255,255,255,0.72);
+      line-height: 1.7; margin-bottom: var(--space-8);
+      max-width: 56ch;
+    }
+    .hero__ctas { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+    .btn--hero { background: var(--color-accent); color: #fff; font-size: var(--text-base); padding: var(--space-4) var(--space-8); }
+    .btn--hero:hover { background: var(--color-accent-hover); }
+    .btn--hero-outline { border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); font-size: var(--text-base); padding: var(--space-4) var(--space-8); }
+    .btn--hero-outline:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.1); }
+
+    /* ── HERO FORM CARD ─────────────────────────────────────────────── */
+    .hero__form-card {
+      background: var(--color-surface-2);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--color-divider);
+    }
+    .form-card__badge {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--color-success); background: var(--color-success-highlight);
+      padding: var(--space-1) var(--space-3); border-radius: var(--radius-full);
+      margin-bottom: var(--space-4);
+    }
+    .form-card__heading { font-family: var(--font-display); font-weight: 800; font-size: var(--text-lg); color: var(--color-text); margin-bottom: var(--space-2); }
+    .form-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-6); }
+    .form-group { margin-bottom: var(--space-4); }
+    .form-group label { display: block; font-size: var(--text-xs); font-weight: 600; color: var(--color-text-muted); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: var(--space-2); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      color: var(--color-text);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px var(--color-primary-highlight);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b6a66' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+    .form-submit-btn {
+      width: 100%; background: var(--color-accent); color: #fff;
+      border: none; border-radius: var(--radius-md);
+      padding: var(--space-4); font-size: var(--text-base); font-weight: 700;
+      cursor: pointer; margin-top: var(--space-2);
+      transition: background var(--transition), transform 80ms;
+      font-family: var(--font-display);
+    }
+    .form-submit-btn:hover { background: var(--color-accent-hover); }
+    .form-submit-btn:active { transform: scale(0.99); }
+    .form-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .form-message { display: none; margin-top: var(--space-4); padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); font-size: var(--text-sm); font-weight: 500; }
+    .form-message.success { display: block; background: var(--color-success-highlight); color: var(--color-success); border: 1px solid color-mix(in oklab, var(--color-success) 25%, transparent); }
+    .form-message.error { display: block; background: color-mix(in oklab, #a12c2c 10%, transparent); color: #a12c2c; border: 1px solid color-mix(in oklab, #a12c2c 25%, transparent); }
+
+    @media (max-width: 900px) {
+      .hero__inner { grid-template-columns: 1fr; }
+      .hero__form-card { max-width: 520px; }
+    }
+
+    /* ── TRUST BAR ──────────────────────────────────────────────────── */
+    .trust-bar { background: var(--color-surface); border-bottom: 1px solid var(--color-divider); padding-block: var(--space-6); }
+    .trust-bar__inner { display: flex; align-items: center; gap: var(--space-8); flex-wrap: wrap; justify-content: center; }
+    .trust-item { display: flex; align-items: center; gap: var(--space-3); }
+    .trust-item__icon { width: 20px; height: 20px; color: var(--color-accent); flex-shrink: 0; }
+    .trust-item__text { font-size: var(--text-xs); font-weight: 500; color: var(--color-text-muted); max-width: 28ch; line-height: 1.4; }
+    .trust-divider { width: 1px; height: 28px; background: var(--color-divider); flex-shrink: 0; }
+    @media (max-width: 600px) { .trust-divider { display: none; } }
+
+    /* ── SECTION LABELS ─────────────────────────────────────────────── */
+    .section-label {
+      display: inline-block;
+      font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--color-accent); margin-bottom: var(--space-4);
+    }
+    .section-heading { font-family: var(--font-display); font-weight: 800; font-size: var(--text-xl); color: var(--color-text); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: var(--space-4); }
+    .section-body { font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.7; max-width: 60ch; }
+    .section-header { margin-bottom: clamp(var(--space-10), 5vw, var(--space-16)); }
+    .section-header--center { text-align: center; }
+    .section-header--center .section-body { margin-inline: auto; }
+
+    /* ── ERP PLATFORMS ──────────────────────────────────────────────── */
+    .platforms { background: var(--color-bg); }
+    .platform-grid {
+      display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8);
+      align-items: center;
+    }
+    .platform-chip {
+      display: flex; align-items: center; gap: var(--space-2);
+      background: var(--color-surface-card); border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg); padding: var(--space-3) var(--space-5);
+      font-size: var(--text-sm); font-weight: 600; color: var(--color-text);
+      box-shadow: var(--shadow-sm);
+      transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+    }
+    .platform-chip:hover { border-color: var(--color-primary); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .platform-chip__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; }
+    .arrow-label { font-size: var(--text-sm); font-weight: 700; color: var(--color-text-muted); display: flex; align-items: center; gap: var(--space-2); }
+    .odoo-chip { background: linear-gradient(135deg, var(--color-primary), #0f2a45); color: #fff; border-color: transparent; font-size: var(--text-base); padding: var(--space-4) var(--space-6); }
+    .odoo-chip:hover { border-color: transparent; }
+    .odoo-chip .platform-chip__dot { background: var(--color-accent); }
+
+    /* ── WHY SECTION ────────────────────────────────────────────────── */
+    .why { background: var(--color-surface); }
+    .why__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(var(--space-10), 6vw, var(--space-20));
+      align-items: start;
+    }
+    .problem-list { display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-6); }
+    .problem-item {
+      display: flex; align-items: flex-start; gap: var(--space-4);
+      background: var(--color-surface-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4) var(--space-5);
+      box-shadow: var(--shadow-sm);
+    }
+    .problem-item__icon { width: 20px; height: 20px; color: var(--color-accent); flex-shrink: 0; margin-top: 2px; }
+    .problem-item__text { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
+    .delivery-card {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #0f2a45 100%);
+      border-radius: var(--radius-2xl); padding: clamp(var(--space-8), 4vw, var(--space-12));
+      color: #fff; position: sticky; top: 88px;
+    }
+    .delivery-card__label { font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin-bottom: var(--space-4); }
+    .delivery-card__heading { font-family: var(--font-display); font-weight: 800; font-size: var(--text-xl); color: #fff; letter-spacing: -0.02em; margin-bottom: var(--space-4); line-height: 1.2; }
+    .delivery-card__body { font-size: var(--text-sm); color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: var(--space-6); }
+    .delivery-sub {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-xl); padding: var(--space-5) var(--space-6);
+    }
+    .delivery-sub__label { font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); }
+    .delivery-sub__text { font-size: var(--text-sm); color: rgba(255,255,255,0.82); line-height: 1.65; font-style: italic; }
+    @media (max-width: 900px) { .why__grid { grid-template-columns: 1fr; } .delivery-card { position: static; } }
+
+    /* ── SERVICES ───────────────────────────────────────────────────── */
+    .services { background: var(--color-bg); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-5);
+    }
+    .service-card {
+      background: var(--color-surface-card); border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl); padding: clamp(var(--space-6), 3vw, var(--space-8));
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .service-card:hover { box-shadow: var(--shadow-lg); border-color: var(--color-primary-highlight); transform: translateY(-3px); }
+    .service-card__num { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 800; color: var(--color-primary-highlight); letter-spacing: -0.04em; line-height: 1; margin-bottom: var(--space-4); }
+    [data-theme="dark"] .service-card__num { color: var(--color-primary-highlight); }
+    .service-card__title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); color: var(--color-text); margin-bottom: var(--space-3); line-height: 1.25; }
+    .service-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; }
+    @media (max-width: 700px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* ── SCOPE ──────────────────────────────────────────────────────── */
+    .scope { background: var(--color-surface); }
+    .scope__inner { display: grid; grid-template-columns: 1fr 360px; gap: clamp(var(--space-10), 6vw, var(--space-20)); align-items: start; }
+    .scope-list { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-6); }
+    .scope-item { display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-4) var(--space-5); background: var(--color-surface-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .scope-item__check { width: 20px; height: 20px; color: var(--color-success); flex-shrink: 0; margin-top: 2px; }
+    .scope-item__text { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
+    .outcomes-card {
+      background: linear-gradient(160deg, var(--color-accent) 0%, #a87020 100%);
+      border-radius: var(--radius-2xl); padding: clamp(var(--space-6), 4vw, var(--space-8));
+      color: #fff; position: sticky; top: 88px;
+    }
+    .outcomes-card__label { font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: var(--space-4); }
+    .outcomes-card__heading { font-family: var(--font-display); font-weight: 800; font-size: var(--text-lg); color: #fff; margin-bottom: var(--space-5); line-height: 1.25; }
+    .outcomes-list { display: flex; flex-direction: column; gap: var(--space-3); }
+    .outcome-item { display: flex; align-items: center; gap: var(--space-3); font-size: var(--text-sm); color: rgba(255,255,255,0.88); }
+    .outcome-item::before { content: ''; width: 6px; height: 6px; background: rgba(255,255,255,0.7); border-radius: 50%; flex-shrink: 0; }
+    @media (max-width: 900px) { .scope__inner { grid-template-columns: 1fr; } .outcomes-card { position: static; } }
+
+    /* ── PACKAGES ───────────────────────────────────────────────────── */
+    .packages { background: var(--color-bg); }
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
+      align-items: stretch;
+    }
+    .package-card {
+      background: var(--color-surface-card); border: 1px solid var(--color-border);
+      border-radius: var(--radius-2xl); padding: clamp(var(--space-6), 3vw, var(--space-8));
+      display: flex; flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .package-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+    .package-card--featured {
+      background: linear-gradient(160deg, var(--color-primary) 0%, #0f2a45 100%);
+      border-color: transparent; color: #fff;
+    }
+    .package-badge {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: var(--space-1) var(--space-3); border-radius: var(--radius-full);
+      margin-bottom: var(--space-5);
+    }
+    .package-badge--default { background: var(--color-surface-offset); color: var(--color-text-muted); }
+    .package-badge--featured { background: var(--color-accent); color: #fff; }
+    .package-card__name { font-family: var(--font-display); font-weight: 800; font-size: var(--text-lg); margin-bottom: var(--space-2); line-height: 1.2; }
+    .package-card--featured .package-card__name { color: #fff; }
+    .package-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-6); flex-shrink: 0; }
+    .package-card--featured .package-card__desc { color: rgba(255,255,255,0.7); }
+    .package-features { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); flex: 1; margin-bottom: var(--space-8); }
+    .package-features li { display: flex; align-items: flex-start; gap: var(--space-3); font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.5; }
+    .package-card--featured .package-features li { color: rgba(255,255,255,0.78); }
+    .package-features li::before { content: '✓'; font-weight: 700; color: var(--color-success); flex-shrink: 0; }
+    .package-card--featured .package-features li::before { color: var(--color-accent); }
+    .package-card .btn { margin-top: auto; width: 100%; justify-content: center; }
+    .btn--package { border: 1.5px solid var(--color-border); color: var(--color-text); background: transparent; padding: var(--space-3) var(--space-6); border-radius: var(--radius-lg); }
+    .btn--package:hover { background: var(--color-surface-offset); border-color: var(--color-primary); }
+    .btn--package-featured { background: var(--color-accent); border-color: transparent; color: #fff; padding: var(--space-3) var(--space-6); border-radius: var(--radius-lg); }
+    .btn--package-featured:hover { background: var(--color-accent-hover); }
+    @media (max-width: 900px) { .packages-grid { grid-template-columns: 1fr; max-width: 520px; } }
+
+    /* ── BEST FIT ───────────────────────────────────────────────────── */
+    .bestfit { background: var(--color-surface); }
+    .fit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+      margin-top: clamp(var(--space-8), 4vw, var(--space-12));
+    }
+    .fit-card {
+      background: var(--color-surface-card); border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl); padding: var(--space-6);
+      box-shadow: var(--shadow-sm);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .fit-card:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
+    .fit-card__icon { width: 36px; height: 36px; margin-bottom: var(--space-4); color: var(--color-accent); }
+    .fit-card__title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); color: var(--color-text); margin-bottom: var(--space-2); }
+    .fit-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
+    @media (max-width: 900px) { .fit-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .fit-grid { grid-template-columns: 1fr; } }
+
+    /* ── FAQ ────────────────────────────────────────────────────────── */
+    .faq { background: var(--color-bg); }
+    .faq-list { display: flex; flex-direction: column; gap: 0; max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--color-divider); }
+    .faq-item:first-child { border-top: 1px solid var(--color-divider); }
+    .faq-btn {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      gap: var(--space-4); padding: var(--space-5) 0;
+      background: none; border: none; cursor: pointer;
+      text-align: left; font-size: var(--text-base); font-weight: 600;
+      color: var(--color-text); font-family: var(--font-body);
+    }
+    .faq-btn svg { flex-shrink: 0; transition: transform 0.25s cubic-bezier(0.16,1,0.3,1); color: var(--color-text-muted); }
+    .faq-item.open .faq-btn svg { transform: rotate(180deg); }
+    .faq-answer {
+      display: none; padding-bottom: var(--space-5);
+      font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75;
+      max-width: 68ch;
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ── BOTTOM CTA ─────────────────────────────────────────────────── */
+    .bottom-cta {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #0f2a45 60%, #0c1e30 100%);
+      position: relative; overflow: hidden;
+    }
+    .bottom-cta::before {
+      content: '';
+      position: absolute; bottom: -30%; left: -10%;
+      width: 60vw; height: 150%;
+      background: radial-gradient(ellipse at center, rgba(201,146,42,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .bottom-cta__inner {
+      display: grid; grid-template-columns: 1fr 400px;
+      gap: clamp(var(--space-12), 6vw, var(--space-20));
+      align-items: center; position: relative; z-index: 1;
+    }
+    .bottom-cta__label { font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin-bottom: var(--space-4); }
+    .bottom-cta__heading { font-family: var(--font-display); font-weight: 800; font-size: var(--text-xl); color: #fff; letter-spacing: -0.02em; margin-bottom: var(--space-5); line-height: 1.15; }
+    .bottom-cta__body { font-size: var(--text-base); color: rgba(255,255,255,0.68); line-height: 1.7; margin-bottom: var(--space-8); max-width: 52ch; }
+    .bottom-cta__btns { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+    .cta-card {
+      background: var(--color-surface-2); border-radius: var(--radius-2xl);
+      padding: clamp(var(--space-6), 4vw, var(--space-8));
+      box-shadow: var(--shadow-xl);
+    }
+    .cta-card__heading { font-family: var(--font-display); font-weight: 800; font-size: var(--text-lg); color: var(--color-text); margin-bottom: var(--space-3); }
+    .cta-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; margin-bottom: var(--space-6); }
+    @media (max-width: 900px) { .bottom-cta__inner { grid-template-columns: 1fr; } }
+
+    /* ── FOOTER ─────────────────────────────────────────────────────── */
+    footer {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-divider);
+      padding-block: var(--space-10);
+    }
+    .footer__inner { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; }
+    .footer__brand { max-width: 300px; }
+    .footer__brand-name { font-family: var(--font-display); font-weight: 800; font-size: var(--text-lg); color: var(--color-text); margin-bottom: var(--space-2); }
+    .footer__brand-tag { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.6; }
+    .footer__links { display: flex; gap: var(--space-6); flex-wrap: wrap; align-items: center; }
+    .footer__links a { font-size: var(--text-sm); color: var(--color-text-muted); text-decoration: none; }
+    .footer__links a:hover { color: var(--color-text); }
+    .footer__copy { font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-8); text-align: center; }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ───────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo" aria-label="Navabrind IT Solutions">
+          <!-- Custom SVG Logo: N mark in navy/gold -->
+          <svg class="nav__logo-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+            <path d="M9 26V10l12 12V10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 10h6" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M21 26h6" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="nav__logo-text">
+            <span class="nav__logo-name">Navabrind</span>
+            <span class="nav__logo-tag">UAE ERP &amp; Finance Practice</span>
+          </div>
+        </a>
+
+        <ul class="nav__links" id="nav-links" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#scope">ERP Support</a></li>
+          <li><a href="#bestfit">Industries</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="#consultation" class="btn btn--primary">Book Consultation</a>
+          <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <!-- Left: Copy -->
+        <div class="hero__content">
+          <div class="hero__badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+            ERP implementation and migration for UAE businesses
+          </div>
+          <h1 class="hero__heading">
+            Odoo <em>finance-led</em> ERP implementation, migration, and maintenance for growth-focused businesses.
+          </h1>
+          <p class="hero__body">
+            We help UAE businesses implement Odoo end to end, migrate from legacy ERP systems, and maintain stable operations with stronger finance control, reporting confidence, and operational discipline through an Odoo finance-led implementation approach.
+          </p>
+          <div class="hero__ctas">
+            <a href="#consultation" class="btn btn--hero">Talk to Our Team</a>
+            <a href="#scope" class="btn btn--hero-outline">Explore ERP Support</a>
+          </div>
+        </div>
+
+        <!-- Right: Consultation Form -->
+        <div class="hero__form-card" id="consultation">
+          <div class="form-card__badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            UAE-focused
+          </div>
+          <h2 class="form-card__heading">Book a consultation</h2>
+          <p class="form-card__desc">Share your current ERP, finance challenges, operational gaps, and implementation goals. We will recommend the right next step.</p>
+
+          <form id="consultation-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Full name</label>
+                <input type="text" id="f-name" name="name" placeholder="Your name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="f-phone">Phone</label>
+                <input type="tel" id="f-phone" name="phone" placeholder="+971 xx xxx xxxx" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-email">Work email</label>
+              <input type="email" id="f-email" name="email" placeholder="name@company.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="f-company">Company</label>
+              <input type="text" id="f-company" name="company" placeholder="Company name" required autocomplete="organization" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-business-type">Business type</label>
+                <select id="f-business-type" name="businessType">
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Distribution">Distribution</option>
+                  <option value="Trading">Trading Company</option>
+                  <option value="Wholesale">Wholesale / Supply Chain</option>
+                  <option value="Multi-branch SME">Multi-branch UAE SME</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-looking-for">Looking for</label>
+                <select id="f-looking-for" name="lookingFor">
+                  <option value="New ERP implementation">New ERP implementation</option>
+                  <option value="ERP migration to Odoo">ERP migration to Odoo</option>
+                  <option value="Finance cleanup / stabilization">Finance cleanup</option>
+                  <option value="Maintenance and support">Maintenance &amp; support</option>
+                  <option value="Manufacturing / distribution rollout">Manufacturing rollout</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-details">Project details</label>
+              <textarea id="f-details" name="details" placeholder="Tell us about your current ERP, migration plans, manufacturing or distribution workflows, finance issues, or support needs."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn" id="form-btn">Request Consultation</button>
+            <div class="form-message" id="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST BAR ──────────────────────────────────────────────── -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar__inner">
+        <div class="trust-item">
+          <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="trust-item__text">Odoo Gold Partner in India with UAE team</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span class="trust-item__text">Finance-led implementation from day one</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <span class="trust-item__text">End-to-end: implementation to maintenance</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <span class="trust-item__text">Built for VAT, reporting, and audit trail</span>
+        </div>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <div class="trust-item">
+          <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="trust-item__text">Manufacturers, distributors &amp; trading businesses</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ERP PLATFORMS ─────────────────────────────────────────── -->
+  <section class="platforms" id="platforms">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">ERP PLATFORMS</span>
+        <h2 class="section-heading">We support businesses moving from major ERP systems</h2>
+        <p class="section-body">If your current system is limiting finance visibility, operational control, or reporting trust, we can plan a structured migration or replacement path into Odoo.</p>
+      </div>
+      <div class="platform-grid">
+        <div class="platform-chip"><span class="platform-chip__dot"></span> MS Dynamics</div>
+        <div class="platform-chip"><span class="platform-chip__dot"></span> SAP</div>
+        <div class="platform-chip"><span class="platform-chip__dot"></span> Oracle</div>
+        <div class="platform-chip"><span class="platform-chip__dot"></span> Sage</div>
+        <div class="platform-chip"><span class="platform-chip__dot"></span> Zoho ERP</div>
+        <div class="platform-chip"><span class="platform-chip__dot"></span> Epicor</div>
+        <div class="platform-chip"><span class="platform-chip__dot"></span> Tally</div>
+        <div class="platform-chip"><span class="platform-chip__dot"></span> QuickBooks</div>
+        <div class="arrow-label">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          migrating to
+        </div>
+        <div class="platform-chip odoo-chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+          Odoo 17 / 18
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY CHOOSE ────────────────────────────────────────────── -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="why__grid">
+        <div>
+          <span class="section-label">WHY BUSINESSES CHOOSE THIS APPROACH</span>
+          <h2 class="section-heading">A stronger finance and operations story for ERP buyers</h2>
+          <p class="section-body">Many ERP projects focus on software modules but underdeliver on finance control, reporting, and day-to-day execution. We structure the solution around how the business actually runs.</p>
+          <div class="problem-list">
+            <div class="problem-item">
+              <svg class="problem-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="problem-item__text">Accounting still depends on spreadsheets after ERP go-live</span>
+            </div>
+            <div class="problem-item">
+              <svg class="problem-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="problem-item__text">Finance reports do not match operational reality</span>
+            </div>
+            <div class="problem-item">
+              <svg class="problem-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="problem-item__text">VAT setup, tax mapping, and reconciliations are inconsistent</span>
+            </div>
+            <div class="problem-item">
+              <svg class="problem-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="problem-item__text">Inventory, procurement, sales, and finance teams work in silos</span>
+            </div>
+            <div class="problem-item">
+              <svg class="problem-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="problem-item__text">Month-end close, receivables, and payables lack control</span>
+            </div>
+            <div class="problem-item">
+              <svg class="problem-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="problem-item__text">Migration from MS Dynamics, SAP, Oracle, Sage, or Tally feels risky</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="delivery-card">
+          <div class="delivery-card__label">DELIVERY MODEL</div>
+          <h3 class="delivery-card__heading">UAE-led finance credibility with implementation depth.</h3>
+          <p class="delivery-card__body">Discovery, fitment, finance alignment, and business review are guided by an experienced Odoo team, with Gold Partner delivery capability in India and business coordination through a team in the UAE. The model is built for end-to-end implementation, migration, stabilization, and long-term maintenance support.</p>
+          <div class="delivery-sub">
+            <div class="delivery-sub__label">What this means for clients</div>
+            <p class="delivery-sub__text">Better trust during pre-sales, stronger finance decisions during implementation, and dependable continuity after go-live for teams that need long-term support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ──────────────────────────────────────────────── -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">SERVICES</span>
+        <h2 class="section-heading">What this practice delivers</h2>
+        <p class="section-body">A focused service mix for UAE businesses that need ERP implementation, migration, finance control, and ongoing maintenance support across finance and operations.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card__num">01</div>
+          <h3 class="service-card__title">Accounting-led Odoo Implementation</h3>
+          <p class="service-card__desc">Build Odoo around finance structure, tax logic, reporting, controls, approvals, and operational accounting discipline from the start. VAT-ready, audit-trail compliant, and aligned with UAE regulatory requirements.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__num">02</div>
+          <h3 class="service-card__title">ERP Migration to Odoo</h3>
+          <p class="service-card__desc">Move from MS Dynamics, SAP, Oracle, Sage, Zoho, Epicor, Tally, QuickBooks, or legacy ERP environments with a controlled transition plan — data mapping, validation, opening balances, and go-live readiness.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__num">03</div>
+          <h3 class="service-card__title">Manufacturing &amp; Distribution Rollouts</h3>
+          <p class="service-card__desc">Deliver end-to-end implementation for manufacturers and distribution businesses with aligned finance, inventory, supply chain, procurement, and sales workflows running in one connected system.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__num">04</div>
+          <h3 class="service-card__title">Maintenance &amp; Stabilization Services</h3>
+          <p class="service-card__desc">Support post-go-live performance with issue resolution, reporting fixes, process refinement, user support, and ongoing maintenance services — so the system keeps delivering long after launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── IMPLEMENTATION SCOPE ──────────────────────────────────── -->
+  <section class="scope" id="scope">
+    <div class="container">
+      <div class="scope__inner">
+        <div>
+          <span class="section-label">IMPLEMENTATION SCOPE</span>
+          <h2 class="section-heading">End-to-end implementation and maintenance</h2>
+          <p class="section-body">A practical scope for businesses that need one partner for finance, manufacturing, distribution, migration, training, and post-go-live continuity.</p>
+          <div class="scope-list">
+            <div class="scope-item">
+              <svg class="scope-item__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="scope-item__text">End-to-end implementation for Accounting, Sales, Purchase, Inventory, Manufacturing, Distribution, CRM, and Invoicing</span>
+            </div>
+            <div class="scope-item">
+              <svg class="scope-item__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="scope-item__text">Chart of accounts, VAT and tax setup, approval flows, and reporting structure aligned to UAE requirements</span>
+            </div>
+            <div class="scope-item">
+              <svg class="scope-item__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="scope-item__text">Role-based access, controls, workflows, governance, and document discipline</span>
+            </div>
+            <div class="scope-item">
+              <svg class="scope-item__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="scope-item__text">Master data planning, migration validation, opening balances, and go-live readiness</span>
+            </div>
+            <div class="scope-item">
+              <svg class="scope-item__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="scope-item__text">Training, UAT, go-live, hypercare, stabilization, and long-term maintenance support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outcomes-card">
+          <div class="outcomes-card__label">OUTCOMES</div>
+          <h3 class="outcomes-card__heading">Designed to improve trust in numbers and operations.</h3>
+          <div class="outcomes-list">
+            <div class="outcome-item">Cleaner month-end close</div>
+            <div class="outcome-item">More reliable VAT and tax handling</div>
+            <div class="outcome-item">Stronger receivables and payables control</div>
+            <div class="outcome-item">Better inventory and operational visibility</div>
+            <div class="outcome-item">Higher confidence in management reporting</div>
+            <div class="outcome-item">Improved continuity after go-live</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PACKAGES ──────────────────────────────────────────────── -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-label">PACKAGES</span>
+        <h2 class="section-heading">Clear starting points for ERP opportunities</h2>
+        <p class="section-body">Structured packages help buyers move forward with a defined scope instead of a vague software conversation.</p>
+      </div>
+      <div class="packages-grid">
+
+        <div class="package-card">
+          <div class="package-badge package-badge--default">Implementation</div>
+          <h3 class="package-card__name">Implementation Foundation</h3>
+          <p class="package-card__desc">For businesses starting with a finance-led Odoo implementation and core operating processes.</p>
+          <ul class="package-features" role="list">
+            <li>Accounting, Sales, Purchase, and Invoicing</li>
+            <li>Chart of accounts and tax structure</li>
+            <li>VAT-aligned configuration</li>
+            <li>Roles, approvals, and workflows</li>
+            <li>Core user training and go-live support</li>
+          </ul>
+          <a href="#consultation" class="btn btn--package">Book Foundation Package</a>
+        </div>
+
+        <div class="package-card package-card--featured">
+          <div class="package-badge package-badge--featured">★ Most Popular</div>
+          <h3 class="package-card__name">Manufacturing / Distribution Suite</h3>
+          <p class="package-card__desc">For companies that need end-to-end operational control across finance, inventory, procurement, and fulfilment.</p>
+          <ul class="package-features" role="list">
+            <li>Everything in Implementation Foundation</li>
+            <li>Inventory and warehouse workflows</li>
+            <li>Manufacturing or distribution process setup</li>
+            <li>Controls, reporting, and operational dashboards</li>
+            <li>Cross-functional training and stabilization</li>
+            <li>Post-go-live maintenance planning</li>
+          </ul>
+          <a href="#consultation" class="btn btn--package-featured">Book Industry Suite</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-badge package-badge--default">Migration</div>
+          <h3 class="package-card__name">Migration + Maintenance</h3>
+          <p class="package-card__desc">For businesses moving from another ERP or improving a weak current setup with long-term support.</p>
+          <ul class="package-features" role="list">
+            <li>ERP assessment and migration roadmap</li>
+            <li>Data mapping and opening balance validation</li>
+            <li>System cleanup and process redesign</li>
+            <li>Go-live and stabilization support</li>
+            <li>Ongoing maintenance and enhancement services</li>
+          </ul>
+          <a href="#consultation" class="btn btn--package">Plan My Migration</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BEST FIT ───────────────────────────────────────────────── -->
+  <section class="bestfit" id="bestfit">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">BEST FIT</span>
+        <h2 class="section-heading">Built for UAE businesses that need finance discipline and operational control</h2>
+        <p class="section-body">Well suited for businesses where accounting control, reporting accuracy, manufacturing flow, and distribution structure matter as much as automation.</p>
+      </div>
+      <div class="fit-grid">
+        <div class="fit-card">
+          <svg class="fit-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8l2 2 4-4"/></svg>
+          <div class="fit-card__title">Manufacturing businesses</div>
+          <p class="fit-card__desc">Production, MRP, quality, inventory, and finance running in one connected Odoo environment.</p>
+        </div>
+        <div class="fit-card">
+          <svg class="fit-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div class="fit-card__title">Distribution companies</div>
+          <p class="fit-card__desc">Multi-warehouse, purchase order flow, delivery tracking, and distributor finance aligned end to end.</p>
+        </div>
+        <div class="fit-card">
+          <svg class="fit-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <div class="fit-card__title">Trading companies</div>
+          <p class="fit-card__desc">Import, sales, invoicing, and finance controls structured for a UAE trading operation.</p>
+        </div>
+        <div class="fit-card">
+          <svg class="fit-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <div class="fit-card__title">Wholesale &amp; supply chain</div>
+          <p class="fit-card__desc">High-volume procurement, supplier management, and supply chain visibility inside Odoo.</p>
+        </div>
+        <div class="fit-card">
+          <svg class="fit-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div class="fit-card__title">Multi-branch UAE SMEs</div>
+          <p class="fit-card__desc">Consolidated reporting, inter-company transfers, and multi-location controls for growing UAE businesses.</p>
+        </div>
+        <div class="fit-card">
+          <svg class="fit-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <div class="fit-card__title">Companies replacing legacy ERP</div>
+          <p class="fit-card__desc">Structured migration from spreadsheet-heavy or underperforming ERP environments into a stable Odoo foundation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ───────────────────────────────────────────────────── -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-heading">Questions decision-makers usually ask</h2>
+        <p class="section-body">Key answers for businesses evaluating implementation, migration, finance control, and support continuity.</p>
+      </div>
+      <div class="faq-list" role="list">
+        <div class="faq-item" role="listitem">
+          <button class="faq-btn" aria-expanded="false">
+            Is this only for new Odoo implementations?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">No. We support new Odoo implementations, ERP migrations, finance cleanup, stabilization, and long-term maintenance services. Whether you are starting fresh, replacing another ERP, or trying to fix an unstable existing system — the approach adapts to where you are.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-btn" aria-expanded="false">
+            Which ERP systems do you support for migration or replacement?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">We work with businesses moving from MS Dynamics, SAP, Oracle, Sage, Zoho, Epicor, Tally, QuickBooks, spreadsheets, and other legacy ERP platforms. Each migration follows a structured plan: assessment, data mapping, opening balance validation, parallel testing, and go-live.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-btn" aria-expanded="false">
+            Do you support manufacturers and distributors?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes. We provide end-to-end implementation and maintenance services for manufacturing and distribution businesses, covering finance, inventory, procurement, workflows, and reporting. Manufacturing and distribution are among our most common engagements in the UAE.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-btn" aria-expanded="false">
+            What makes this Odoo finance-led approach different?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Many ERP projects fail at the finance layer — modules are configured but the chart of accounts, VAT mapping, approval flows, and reporting structure are not properly designed. Our approach starts with finance architecture first, so everything else is built on a solid accounting foundation that matches how the business actually runs.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOTTOM CTA ─────────────────────────────────────────────── -->
+  <section class="bottom-cta">
+    <div class="container">
+      <div class="bottom-cta__inner">
+        <div>
+          <div class="bottom-cta__label">READY TO TALK?</div>
+          <h2 class="bottom-cta__heading">Build an ERP setup your finance and operations teams can trust.</h2>
+          <p class="bottom-cta__body">Whether you are planning a new implementation, replacing another ERP, or improving an unstable environment, this approach is built to strengthen control, reporting confidence, and long-term operational continuity.</p>
+          <div class="bottom-cta__btns">
+            <a href="#consultation" class="btn btn--hero">Book Consultation</a>
+            <a href="#scope" class="btn btn--hero-outline">View ERP Support</a>
+          </div>
+        </div>
+
+        <div class="cta-card">
+          <h3 class="cta-card__heading">Start with a consultation</h3>
+          <p class="cta-card__desc">Share your current environment, manufacturing or distribution model, finance concerns, and support needs. We will help define the most suitable next step.</p>
+          <a href="#consultation" class="btn btn--accent btn--full btn--lg">Book Consultation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Navabrind</div>
+          <p class="footer__brand-tag">Odoo finance-led ERP implementation, migration, and maintenance services for UAE businesses.</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="#services">Services</a>
+          <a href="#scope">ERP Support</a>
+          <a href="#bestfit">Industries</a>
+          <a href="#consultation">Contact</a>
+          <a href="https://navabrindsol.com" target="_blank" rel="noopener">navabrindsol.com</a>
+        </nav>
+      </div>
+      <p class="footer__copy">&copy; 2026 Navabrind IT Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPTS ───────────────────────────────────────────────── -->
+  <script>
+  (function() {
+    // ── THEME TOGGLE ─────────────────────────────────────────────
+    const toggle = document.querySelector('[data-theme-toggle]');
+    const root = document.documentElement;
+    let theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    root.setAttribute('data-theme', theme);
+    updateToggleIcon();
+    toggle && toggle.addEventListener('click', () => {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      updateToggleIcon();
+    });
+    function updateToggleIcon() {
+      if (!toggle) return;
+      toggle.innerHTML = theme === 'dark'
+        ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    }
+
+    // ── NAV SCROLL ───────────────────────────────────────────────
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── MOBILE MENU ──────────────────────────────────────────────
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger && hamburger.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    navLinks && navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => { navLinks.classList.remove('open'); hamburger && hamburger.setAttribute('aria-expanded', 'false'); });
+    });
+
+    // ── FAQ ACCORDION ────────────────────────────────────────────
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const open = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    });
+
+    // ── FORM SUBMISSION → CRM ────────────────────────────────────
+    const form = document.getElementById('consultation-form');
+    const formBtn = document.getElementById('form-btn');
+    const formMsg = document.getElementById('form-msg');
+
+    form && form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const company = form.querySelector('[name="company"]').value.trim();
+      const phone = form.querySelector('[name="phone"]').value.trim();
+      const businessType = form.querySelector('[name="businessType"]').value;
+      const lookingFor = form.querySelector('[name="lookingFor"]').value;
+      const details = form.querySelector('[name="details"]').value.trim();
+
+      if (!name || !email || !company) {
+        showMsg('Please fill in your name, email, and company.', 'error');
+        return;
+      }
+
+      formBtn.disabled = true;
+      formBtn.textContent = 'Sending…';
+      formMsg.className = 'form-message';
+      formMsg.style.display = 'none';
+
+      try {
+        const res = await fetch('/.netlify/functions/submit-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name, email, company, phone,
+            businessType, lookingFor, details,
+            source: 'UAE ERP Website'
+          })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          showMsg('Thank you — we will be in touch shortly.', 'success');
+          form.reset();
+        } else {
+          showMsg('Something went wrong. Please try again or email us directly.', 'error');
+        }
+      } catch {
+        showMsg('Unable to submit. Please check your connection and try again.', 'error');
+      } finally {
+        formBtn.disabled = false;
+        formBtn.textContent = 'Request Consultation';
+      }
+    });
+
+    function showMsg(text, type) {
+      formMsg.textContent = text;
+      formMsg.className = 'form-message ' + type;
+    }
+  })();
+  </script>
+</body>
+</html>
