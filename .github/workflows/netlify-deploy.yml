@@ -1,0 +1,51 @@
+name: Deploy UAE ERP to Netlify
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create Netlify site and deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          npm install -g netlify-cli
+          
+          # Check if site already exists
+          EXISTING=$(netlify api listSites --auth $NETLIFY_AUTH_TOKEN | \
+            python3 -c "import json,sys; sites=json.load(sys.stdin); \
+            [print(s['id']) for s in sites if s['name']=='uae-erp-navabrindsol']" 2>/dev/null)
+          
+          if [ -z "$EXISTING" ]; then
+            echo "Creating new Netlify site..."
+            SITE_ID=$(netlify api createSiteInTeam \
+              --data '{"name": "uae-erp-navabrindsol", "account_slug": "navabrind"}' \
+              --auth $NETLIFY_AUTH_TOKEN | python3 -c "import json,sys; print(json.load(sys.stdin)['id'])")
+            echo "Created site: $SITE_ID"
+          else
+            SITE_ID=$EXISTING
+            echo "Using existing site: $SITE_ID"
+          fi
+          
+          # Deploy the site files
+          netlify deploy \
+            --site=$SITE_ID \
+            --dir=. \
+            --prod \
+            --auth=$NETLIFY_AUTH_TOKEN \
+            --message="Deploy from GitHub Actions"
+          
+          echo "SITE_ID=$SITE_ID" >> $GITHUB_OUTPUT
+          echo "SITE_URL=https://uae-erp-navabrindsol.netlify.app" >> $GITHUB_OUTPUT
+
+      - name: Output deploy info
+        run: |
+          echo "Deploy complete!"
+          echo "Site URL: https://uae-erp-navabrindsol.netlify.app"
